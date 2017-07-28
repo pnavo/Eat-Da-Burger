@@ -1,0 +1,35 @@
+var express = require('express');
+var router = express.Router();
+var burger = require('../models/burger.js');
+
+// Creating routes
+router.get('/', function (req, res) {
+  res.redirect('/index');
+});
+
+// Index Page 
+router.get('/index', function (req, res) {
+  burger.selectAll(function(data) {
+    var hbsObject = { burgers: data };
+    //console.log(hbsObject);
+    res.render('index', hbsObject);
+  });
+});
+
+// Create a burger
+router.post('/burger/create', function (req, res) {
+  burger.insertOne(req.body.burger_name, function() {
+    res.redirect('/index');
+  });
+});
+
+
+// Om nom nom
+router.post('/burger/eat/:id', function (req, res) {
+  burger.updateOne(req.params.id, function() {
+    res.redirect('/index');
+  });
+});
+
+// Export routes
+module.exports = router;

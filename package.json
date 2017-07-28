@@ -1,0 +1,27 @@
+{
+  "name": "Eat-Da-Burger",
+  "version": "1.0.0",
+  "description": "Eat Da Burger uses a variety of technologies to produce items with different names, and allows the use to devour said burgers, while posting previous burgers onto the page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pnavo/Eat-Da-Burger.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pnavo/Eat-Da-Burger/issues"
+  },
+  "homepage": "https://github.com/pnavo/Eat-Da-Burger#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "express-handlebars": "^3.0.0",
+    "method-override": "^2.3.9",
+    "mysql": "^2.14.0"
+  }
+}
